@@ -83,7 +83,7 @@ This ensures the live status is always an accurate reflection of the current atm
 | Runtime | Cloudflare Workers (JavaScript / V8 Engine) |
 | Database | Cloudflare D1 (SQL-based Edge Database) |
 | Messaging | Telegram Bot API (Webhooks) |
-| Scheduling | Cloudflare Cron Triggers (Vibe Shift monitoring) |
+| Scheduling | Cloudflare Cron Triggers (Shift monitoring) |
 
 ---
 
