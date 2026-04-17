@@ -3,7 +3,7 @@
 # North Sector PIREP Bot
 ### Temporal-Decay Weighted Crowdsourced Intelligence for Cadet Pilots
 
-The North Sector PIREP Bot is a serverless, high-utility tool designed to solve the "information lag" in general aviation training environments. While official ATIS and PIREPs provide critical data, they often fail to capture the high-frequency "vibe shifts" of the Sonoran Desert's thermal cycles.
+The North Sector PIREP Bot is a serverless, high-utility tool designed to solve the "information lag" in general aviation training environments. While official ATIS and PIREPs provide critical data, they often fail to capture the high-frequency shifts of the Sonoran Desert's thermal cycles.
 
 This bot allows a community of pilots to log subjective conditions in seconds, which are then processed through a temporal-decay algorithm to provide a real-time, peer-reviewed status board of the practice areas.
 
@@ -13,14 +13,14 @@ This bot allows a community of pilots to log subjective conditions in seconds, w
 
 Standard PIREPs (Pilot Weather Reports) are essential but suffer from high friction. Reporting via Radio (ATC) or Flight Service takes significant mental bandwidth during high-workload phases of flight. Consequently, reports are infrequent, and the data is often "stale" by the time a student enters the practice area.
 
-**The Solution:** A "Calm Tech" interface via Telegram that reduces a complex meteorological observation to three taps, processed at the edge with zero latency.
+**The Solution:** A Calm interface via Telegram that reduces a complex meteorological observation to three taps, processed at the edge with zero latency.
 
 ---
 
 ## 🚀 Key Features
 
 ### 1. The Dynamic Status Board (`/status`)
-A live dashboard showing the "Vibe" of the SATR, Local Patterns, and Anthem sectors. Instead of a simple average, the board uses a weighted scoring system that prioritizes recent data over historical logs.
+A live dashboard showing the status of the SATR, Local Patterns, and Anthem sectors. Instead of a simple average, the board uses a weighted scoring system that prioritizes recent data over historical logs.
 
 ### 2. Calibrated 1–5 Reporting (`/landed`)
 To prevent "Subjective Drift," all reports are mapped to a strict Standard Operating Procedure (SOP):
@@ -28,8 +28,8 @@ To prevent "Subjective Drift," all reports are mapped to a strict Standard Opera
 - **Turbulence:** Calibrated from 1 (Glassy) to 5 (Unsafe/RTB Required) based on airspeed fluctuations and control workload.
 - **Winds:** Calibrated from 1 (Calm) to 5 (Hazardous) based on personal and solo crosswind minimums.
 
-### 3. Vibe Shift Detection (Automated Intelligence)
-A background process monitors the rate of change in the North Sector. If the average turbulence score jumps significantly (e.g., +1.0) within a 30-minute window, the bot autonomously blasts a 🚨 **VIBE SHIFT** alert to the group to warn incoming blocks of rapidly degrading conditions.
+### 3. Shift Detection (Automated Intelligence)
+A background process monitors the rate of change in the North Sector. If the average turbulence score jumps significantly (e.g., +1.0) within a 30-minute window, the bot autonomously blasts a 🚨 ** SHIFT** alert to the group to warn incoming blocks of rapidly degrading conditions.
 
 ### 4. Anomaly & Troll Filtering
 The system compares new entries against a 2-hour rolling peer average. If a report deviates by more than 2.5 points from the current consensus, it is automatically flagged and its weight is reduced to `0.2`, preventing a single outlier from "poisoning" the dashboard.
